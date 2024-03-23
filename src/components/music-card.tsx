@@ -5,8 +5,7 @@ import {
   CardContent,
   Typography,
 } from "@mui/material";
-import { useState } from "react";
-import Player from "./player";
+import songStore from "../stores/songStore";
 
 export interface MusicCardProps {
   title: string;
@@ -19,9 +18,17 @@ const MusicCard: React.FC<MusicCardProps> = ({
   imageUrl,
   description,
 }) => {
+  const handleClick = () => {
+    songStore.setCurrentSong(title);
+  };
+
   return (
     <>
-      <Card elevation={6} style={{ width: 200, height: 300 }}>
+      <Card
+        elevation={6}
+        style={{ width: 200, height: 300 }}
+        onClick={handleClick}
+      >
         <CardActionArea>
           <CardMedia
             component="img"

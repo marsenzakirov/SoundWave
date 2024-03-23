@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home";
 import Artist from "./pages/artist";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import Player from "./components/player";
 
 const darkTheme = createTheme({
   palette: {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/artist" element={<Artist />} />
         </Routes>
       </Router>
+      <Player />
     </ThemeProvider>
   );
 }
