@@ -1,17 +1,13 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/home';
-import Artist from './pages/artist';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Home from "./pages/home";
+import Artist from "./pages/artist";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
   },
 });
-
-
-
-
 
 function App() {
   return (
@@ -23,7 +19,6 @@ function App() {
         </Routes>
       </Router>
     </ThemeProvider>
-
   );
 }
 

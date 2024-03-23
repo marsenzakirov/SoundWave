@@ -4,6 +4,6 @@ const Artist: React.FC = () => {
       <h1>Artist Page</h1>
     </div>
   );
-}
+};
 
 export default Artist;
