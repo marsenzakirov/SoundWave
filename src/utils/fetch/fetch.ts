@@ -1,18 +1,16 @@
-import dotenv from "dotenv";
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
-dotenv.config();
-
 const token: string = process.env.REACT_APP_SPOTIFY_TOKEN || "";
+console.log(token);
 
-enum RequestMethodType {
+export enum RequestMethodType {
   GET = "GET",
   POST = "POST",
   PUT = "PUT",
   DELETE = "DELETE",
 }
 
-async function fetchSpotifyApi<T>(
+export async function fetchSpotifyApi<T>(
   endpoint: string,
   method: RequestMethodType,
   body?: any
